@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ User }} {% endblock %}
+
+{% block content %}
+<h1> Заказчик: {{ User }}</h1>
+<p>
+  заглушка
+</p>
+<ol>
+  {% for key, value in Orders.items %}
+<li>
+    <h4>{{ key }}</h4>
+    {% for key2, value2 in value.items %}
+    {{ key2 }}: {{ value2 }} <br>
+    {% endfor %}
+</li>
+
+  {% endfor %}
+</ol>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ Dict.Goods }} {% endblock %}
+
+{% block content %}
+
+<div><h2>{{ Dict.Goods }}</h2></div>
+
+
+<table border="1" bordercolor="grey" cellpadding="5">
+    <colgroup>
+        <col span="1" style="background:#ECEFF1">
+        <col style="background-color:#F5F5F5">
+            {% for key, value in Dict.items %}
+                <tr>
+                    <td>{{ key }}:   </td>
+                    <td>{{ value }}</td>
+                </tr>
+            {%endfor%}
+    </colgroup>
+</table>
+
+{% endblock %}
