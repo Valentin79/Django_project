@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'GeekBrainsValentin.pythonanywhere.com',
+    'GBValentin.pythonanywhere.com',
 ]
 
 # Application definition
@@ -52,7 +52,7 @@ INTERNAL_IPS = [
 
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -98,10 +98,10 @@ WSGI_APPLICATION = 'my_dz_3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'GeekBrainsValent$default',
-        'USER': 'GeekBrainsValentin',
+        'NAME': 'GBValent$default',
+        'USER': 'GBValentin',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': 'GeekBrainsValentin.mysql.pythonanywhere-services.com',
+        'HOST': 'GBValentin.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
